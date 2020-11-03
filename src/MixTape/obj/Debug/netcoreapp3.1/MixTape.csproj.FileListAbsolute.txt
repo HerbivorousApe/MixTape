@@ -1,0 +1,13 @@
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.exe
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.deps.json
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.runtimeconfig.json
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.runtimeconfig.dev.json
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.dll
+D:\C-sharp\MixTape\src\MixTape\bin\Debug\netcoreapp3.1\MixTape.pdb
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.csprojAssemblyReference.cache
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.AssemblyInfoInputs.cache
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.AssemblyInfo.cs
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.csproj.CoreCompileInputs.cache
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.dll
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.pdb
+D:\C-sharp\MixTape\src\MixTape\obj\Debug\netcoreapp3.1\MixTape.genruntimeconfig.cache
