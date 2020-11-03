@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/MadLib/bin/Debug/netcoreapp3.1/MadLib.dll",
+            "program": "${workspaceFolder}/src/MixTape/bin/Debug/netcoreapp3.1/MixTape.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/MadLib",
+            "cwd": "${workspaceFolder}/src/MixTape",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
