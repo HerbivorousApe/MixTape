@@ -16,7 +16,7 @@ namespace MixTape
         public void Menu()
         {
 
-            ML_Vacation vacation = new ML_Vacation();
+            MadLibs madLibs = new MadLibs();
             Maze maze = new Maze();
             Console.Clear();
 
@@ -39,12 +39,13 @@ namespace MixTape
             Console.WriteLine("     1. MadLibs!");
             Console.WriteLine("     2. Escape the Maze");
             Console.WriteLine("     3. Wheel of Misfortune");
+            Console.WriteLine("");
             Console.WriteLine("     ESC. Exit to DOS");
             //Menu
             switch(Console.ReadKey(true).Key)
             {
                 case ConsoleKey.D1:
-                vacation.ML();
+                madLibs.Menu();
                 break;
                 case ConsoleKey.D2:
                 maze.Move();
