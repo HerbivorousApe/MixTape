@@ -18,6 +18,7 @@ namespace MixTape
 
             MadLibs madLibs = new MadLibs();
             Maze maze = new Maze();
+            Wheel wheel = new Wheel();
             Console.Clear();
 
             //http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=MIX%20TAPE
@@ -51,7 +52,7 @@ namespace MixTape
                 maze.Move();
                 break;
                 case ConsoleKey.D3:
-                Console.WriteLine("Wheel of Misfortune");
+                wheel.Start();
                 break;
                 case ConsoleKey.Escape:
                 Console.WriteLine("");
