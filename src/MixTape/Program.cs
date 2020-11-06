@@ -7,10 +7,7 @@ namespace MixTape
         static void Main(string[] args)
         {
             Program program = new Program();
-            //Console.WriteLine("Hello World!");
             program.Menu();
-            
-            //vacation.ML();
         }
 
         public void Menu()
@@ -42,7 +39,7 @@ namespace MixTape
             Console.WriteLine("     3. Wheel of Misfortune");
             Console.WriteLine("");
             Console.WriteLine("     ESC. Exit to DOS");
-            //Menu
+            
             switch(Console.ReadKey(true).Key)
             {
                 case ConsoleKey.D1:
@@ -61,11 +58,8 @@ namespace MixTape
                 break;
                 default:
                 Menu();
-                break;
-                
+                break;        
             }
-            //Accept Esc to escape, 1, 2, 3, etc. for menu options
         }
-
     }
 }

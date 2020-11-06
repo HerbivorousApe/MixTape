@@ -36,17 +36,17 @@ namespace MixTape
             returnCoords();
             Console.WriteLine("");
             availableDirection();
-
+            
 
 
             Console.WriteLine("");
-            Console.WriteLine($"Available Direction(s):");
+            Console.WriteLine($" Available Direction(s):");
             if (north) {Console.ForegroundColor = ConsoleColor.Green;}
-            Console.WriteLine($"      North");
+            Console.WriteLine($"       North");
             Console.ForegroundColor = ConsoleColor.Gray;
 
             if (west) {Console.ForegroundColor = ConsoleColor.Green;}
-            Console.Write($" West");
+            Console.Write($"  West");
             Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.Write($"   +");
@@ -56,8 +56,10 @@ namespace MixTape
             Console.ForegroundColor = ConsoleColor.Gray;
 
             if (south) {Console.ForegroundColor = ConsoleColor.Green;}
-            Console.WriteLine($"      South");
+            Console.WriteLine($"       South");
             Console.ForegroundColor = ConsoleColor.Gray;
+
+            if (xLocation == 0 && yLocation == 1) {Map();}
 
             switch(Console.ReadKey(true).Key)
             {
@@ -122,8 +124,8 @@ namespace MixTape
                 default:
                 Move();
                 break;
-                
             }
+            
         }
 
         public void availableDirection()
@@ -136,8 +138,7 @@ namespace MixTape
            if (xLocation == 0 && yLocation == 0) {north = true; east = true;
            Console.WriteLine("You are in the Southwest corner of the Maple Room. You see a podium to the North.");}
            if (xLocation == 0 && yLocation == 1) {north = true; south = true; east = true;
-            Console.WriteLine("You are against the West wall of the Maple Room. You see a map on the podium:");
-            Map();}
+            Console.WriteLine("You are against the West wall of the Maple Room. You see a map on the podium:");}
            if (xLocation == 0 && yLocation == 2) {south = true; east = true;
            Console.WriteLine("You are in the Northwest corner of the Maple Room. You see a podium to the South.");}
            if (xLocation == 0 && yLocation == 6) {east = true;
