@@ -134,7 +134,7 @@ namespace MixTape
             south = false;
             east = false;
             west = false;
-           
+           Console.ForegroundColor = ConsoleColor.Blue;
            if (xLocation == 0 && yLocation == 0) {north = true; east = true;
            Console.WriteLine("You are in the Southwest corner of the Maple Room. You see a podium to the North.");}
            if (xLocation == 0 && yLocation == 1) {north = true; south = true; east = true;
@@ -250,7 +250,7 @@ namespace MixTape
            Console.WriteLine("You are in the Dark Hallway spanning North to South. You see a faint light to the North.");}
            if (xLocation == 9 && yLocation == 9) {north = true; south = true;
            Console.WriteLine("You are in the Dark Hallway. To your North you see an opening leading outside. The hallway continues South.");}
-
+            Console.ForegroundColor = ConsoleColor.Gray;
            if (yLocation == 10)
             {
                 MazeTitle();
@@ -300,6 +300,7 @@ namespace MixTape
         }
         public void Map()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("");
             Console.WriteLine("                                      []  <--Exit");
             Console.WriteLine("                              ████    ██"); //9
@@ -313,6 +314,7 @@ namespace MixTape
             Console.WriteLine("  You are here-->   ><██████████████    "); //1
             Console.WriteLine("                    ████      ██████    ");
             Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }

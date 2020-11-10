@@ -49,7 +49,7 @@ namespace MixTape
                 maze.Move();
                 break;
                 case ConsoleKey.D3:
-                wheel.Start();
+                wheel.SessionSetup();
                 break;
                 case ConsoleKey.Escape:
                 Console.WriteLine("");

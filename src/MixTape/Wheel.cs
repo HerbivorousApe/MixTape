@@ -1,54 +1,29 @@
 using System;
 using System.Collections.Generic;
-
+using System.Drawing;
 
 namespace MixTape
 {
       
     class Wheel : Puzzles
     {
-
-        Random rnd = new Random();   
         List<char> guessed = new List<char>();
         List<string> puzzleList = new List<string>();
-        //int pzNum = GetRandomPuzzleNumber();
-        string puzzle = "My Little Pony".ToUpper(); //puzzles[rnd.Next(puzzles.Count)][0];
-        string category = "Television Show";
-        int guesses = 3;
+        int randomNum;
+        string puzzle; 
+        string category;
+        int guesses;
         string alertMessage = null;
         bool spentGuess = false;
         bool gameWon = false;
         string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         List<string> alphabetList = new List<string>();
-
-      /*  public int GetRandomPuzzleNumber()
-        {
-            Random rnd = new Random();
-            Puzzles puzzles = new Puzzles();
-            return rnd.Next(puzzles.Count);
-        }
-
-        public string GetRandomPuzzle(string type)
-        {
-            int pzNum = rnd.Next(puzzles.Count);
-            switch (type)
-                {
-                    case "name":
-                    return puzzles[pzNum][0].ToUpper();
-                    case "category":
-                    return puzzles[pzNum][1];
-                    case "guesses":
-                    return puzzles[pzNum][2];
-                    default:
-                    return null;
-                }
-        }*/
-
+        
         public void Title()
         {
             
-            Console.WriteLine(puzzles[rnd.Next(puzzles.Count)][0]);
-            Console.WriteLine(puzzles.Count);
+            Console.WriteLine("");
+            Console.WriteLine("");
             Console.WriteLine("██╗    ██╗██╗  ██╗███████╗███████╗██╗          ██████╗ ███████╗");
             Console.WriteLine("██║    ██║██║  ██║██╔════╝██╔════╝██║         ██╔═══██╗██╔════╝");
             Console.WriteLine("██║ █╗ ██║███████║█████╗  █████╗  ██║         ██║   ██║█████╗  ");
@@ -65,19 +40,38 @@ namespace MixTape
             Console.WriteLine("");
         }
 
+
+        public void SessionSetup()
+        {
+            puzzleList.Clear();
+            guessed.Clear();
+            int puzNum = GetRandomPuzzleNumber();
+            puzzle = puzzles[puzNum][0].ToUpper();
+            category = puzzles[puzNum][1];
+            guesses = Int32.Parse(puzzles[puzNum][2]);
+            Start();
+        }
+
         public void Start()
         {
             Console.Clear();
             Title();
             var puzzleDisplay = PuzzleDisplay();
             var alphabetDisplay = AlphabetDisplay();
-
+            
+            
+            
             Console.Write($" {puzzleDisplay}");
             Console.WriteLine("                    Guessed Letters:");
             Console.Write($" {category}");
             Console.WriteLine($"                    {alphabetDisplay}");
             gameWon = GameWon();
-            if (gameWon) {Console.WriteLine("");Console.WriteLine("YOU WIN!!!"); End();};
+            if (gameWon) 
+            {
+                Console.WriteLine("");
+                YouWin();
+                End();
+            };
             Console.WriteLine("");
             Console.WriteLine($"You have {guesses} attempts remaining.");
             if (alertMessage != null)
@@ -145,7 +139,7 @@ namespace MixTape
        public void End()
         {
             Console.WriteLine("");
-            Console.WriteLine("Press M to return to the menu, or ESC to exit.");
+            Console.WriteLine("Press M to return to the menu, P to play another random puzzle, or ESC to exit.");
 
             Program program = new Program();
 
@@ -154,6 +148,10 @@ namespace MixTape
                 case ConsoleKey.M:
                 Console.WriteLine("Returning to Menu");
                 program.Menu();
+                break;
+                case ConsoleKey.P:
+                Console.WriteLine("Loading another puzzle");
+                SessionSetup();
                 break;
                 case ConsoleKey.Escape:
                 Console.WriteLine("");
@@ -244,6 +242,17 @@ namespace MixTape
             {
                 return false;
             }
+        }
+        public void YouWin()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(" ██╗   ██╗ ██████╗ ██╗   ██╗    ██╗    ██╗██╗███╗   ██╗██╗");
+            Console.WriteLine(" ╚██╗ ██╔╝██╔═══██╗██║   ██║    ██║    ██║██║████╗  ██║██║");
+            Console.WriteLine("  ╚████╔╝ ██║   ██║██║   ██║    ██║ █╗ ██║██║██╔██╗ ██║██║");
+            Console.WriteLine("   ╚██╔╝  ██║   ██║██║   ██║    ██║███╗██║██║██║╚██╗██║╚═╝");
+            Console.WriteLine("    ██║   ╚██████╔╝╚██████╔╝    ╚███╔███╔╝██║██║ ╚████║██╗");
+            Console.WriteLine("    ╚═╝    ╚═════╝  ╚═════╝      ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝");
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
     }
