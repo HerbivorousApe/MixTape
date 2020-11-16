@@ -9,7 +9,7 @@ namespace MixTape
     {
         List<char> guessed = new List<char>();
         List<string> puzzleList = new List<string>();
-        int randomNum;
+        
         string puzzle; 
         string category;
         int guesses;

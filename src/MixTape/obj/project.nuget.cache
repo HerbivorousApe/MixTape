@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1/WBO71bE5u28ASwsO1QEl4Sq1aXPo7wzf+TDJxg95mqfxDsOKMvZmNTAXCfvFTIH9p6g5IPz+KFTxFctrb7iw==",
+  "dgSpecHash": "QLWzJYyCLQKp/y118DKFYmK0DWY4fE2whVuXxXU7v/nqvu4vc3oG1bEXUxeZTaLOYwMQp26se8wMB0X63bhooQ==",
   "success": true,
   "projectFilePath": "D:\\C-sharp\\MixTape\\src\\MixTape\\MixTape.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.9\\microsoft.netcore.app.runtime.win-x64.3.1.9.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.9\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.9.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.9\\microsoft.aspnetcore.app.runtime.win-x64.3.1.9.nupkg.sha512"
+  ],
   "logs": []
 }
